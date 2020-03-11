@@ -9,15 +9,15 @@ h1, h2, h3, h4 {
 nav {
   color: #403a60;
   font-family: "Nunito", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 nav a {
   color: #403a60;
   position: relative;
-  margin-left: 30px;
   text-decoration: none;
+  margin-right: 40px;
 }
 
 nav a::after {
@@ -43,15 +43,47 @@ nav a:hover::after {
 .dropdown-toggle {
   background-color: transparent;
   border-color: #403a60;
-  border-style: solid;
-  border-top: none;
-  border-right: none;
-  border-left: none;
 }
 
-.dropdown-menu > li > a {
-  margin: 20px;
+.dropdown-item {
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   color: #403a60;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.dropdown-item a::after {
+  content: "";
+  color: #403a60;
+  border-bottom: 3px solid #403a60;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.dropdown-item a:hover::after {
+  color: #403a60;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo {
+  margin: 10px;
+  height: 80px;
+}
+
+.navbar-brand {
+  padding-left: 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5em;
 }
 
 header {
@@ -62,7 +94,7 @@ header {
   align-items: left;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  height: 60vh;
   position: relative;
   color: #fff;
 }
@@ -78,20 +110,14 @@ header::after {
   opacity: 0.3;
 }
 
-.header-content {
-  padding-bottom: 200px;
-}
-
 header * {
-  position: relaive;
-  margin-left: 100px;
+  position: relative;
+  margin-left: 10%;
   z-index: 1;
 }
 
 header h1 {
-  font-size: 60px;
   font-weight: bold;
-  margin-top: 0;
 }
 
 header .icon {
@@ -102,10 +128,9 @@ header p {
   font-size: 2em;
 }
 
-.logo {
-  margin-top: 10px;
-  margin-left: 20px;
-  height: 100px;
+.logo-lg {
+  max-height: 150px;
+  margin-bottom: -20px;
 }
 
 .subhead {
@@ -118,12 +143,12 @@ header p {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  max-width: 95%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
 .recent {
-  margin: 20px;
+  margin: 30px;
   text-decoration: none;
   transition: transform 0.3s ease;
 }
@@ -144,19 +169,23 @@ header p {
   margin-top: 10px;
 }
 
-.card {
-  max-width: 400px;
-}
-
 td {
   padding: 20px;
 }
 
 .text {
   font-size: 1.2em;
-  max-width: 70%;
+  max-width: 70vw;
   margin: 0 auto;
   padding: 40px;
+}
+
+.card-containter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  max-width: 80vw;
+  margin: 0 auto;
 }
 
 .card {
@@ -205,6 +234,7 @@ td {
   letter-spacing: 2px;
   display: inline;
   list-style: none;
+  text-transform: uppercase;
 }
 
 .footer h3 {
