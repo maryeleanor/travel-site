@@ -5,19 +5,22 @@ body {
 h1, h2, h3, h4 {
   font-family: "Playfair Display", serif;
 }
-h1 nav, h2 nav, h3 nav, h4 nav {
+
+nav {
   color: #403a60;
   font-family: "Nunito", sans-serif;
   font-size: 20px;
   font-weight: bold;
 }
-h1 nav a, h2 nav a, h3 nav a, h4 nav a {
+
+nav a {
   color: #403a60;
   position: relative;
   margin-left: 30px;
   text-decoration: none;
 }
-h1 nav a::after, h2 nav a::after, h3 nav a::after, h4 nav a::after {
+
+nav a::after {
   content: "";
   color: #403a60;
   border-bottom: 3px solid #403a60;
@@ -30,12 +33,14 @@ h1 nav a::after, h2 nav a::after, h3 nav a::after, h4 nav a::after {
   height: 100%;
   width: 100%;
 }
-h1 nav a:hover::after, h2 nav a:hover::after, h3 nav a:hover::after, h4 nav a:hover::after {
+
+nav a:hover::after {
   color: #403a60;
   opacity: 1;
   transform: translateY(0);
 }
-h1 .dropdown-toggle, h2 .dropdown-toggle, h3 .dropdown-toggle, h4 .dropdown-toggle {
+
+.dropdown-toggle {
   background-color: transparent;
   border-color: #403a60;
   border-style: solid;
@@ -43,11 +48,13 @@ h1 .dropdown-toggle, h2 .dropdown-toggle, h3 .dropdown-toggle, h4 .dropdown-togg
   border-right: none;
   border-left: none;
 }
-h1 .dropdown-menu > li > a, h2 .dropdown-menu > li > a, h3 .dropdown-menu > li > a, h4 .dropdown-menu > li > a {
+
+.dropdown-menu > li > a {
   margin: 20px;
   color: #403a60;
 }
-h1 header, h2 header, h3 header, h4 header {
+
+header {
   background-image: url("https://source.unsplash.com/1600x900/?travel");
   background-size: cover;
   background-position: center center;
@@ -59,7 +66,8 @@ h1 header, h2 header, h3 header, h4 header {
   position: relative;
   color: #fff;
 }
-h1 header::after, h2 header::after, h3 header::after, h4 header::after {
+
+header::after {
   content: "";
   background-color: #000;
   position: absolute;
@@ -69,35 +77,43 @@ h1 header::after, h2 header::after, h3 header::after, h4 header::after {
   bottom: 0;
   opacity: 0.3;
 }
-h1 .header-content, h2 .header-content, h3 .header-content, h4 .header-content {
+
+.header-content {
   padding-bottom: 200px;
 }
-h1 header *, h2 header *, h3 header *, h4 header * {
+
+header * {
   position: relaive;
   margin-left: 100px;
   z-index: 1;
 }
-h1 header h1, h2 header h1, h3 header h1, h4 header h1 {
+
+header h1 {
   font-size: 60px;
   font-weight: bold;
   margin-top: 0;
 }
-h1 header .icon, h2 header .icon, h3 header .icon, h4 header .icon {
+
+header .icon {
   font-size: 6em;
 }
-h1 header p, h2 header p, h3 header p, h4 header p {
+
+header p {
   font-size: 2em;
 }
-h1 .logo, h2 .logo, h3 .logo, h4 .logo {
+
+.logo {
   margin-top: 10px;
   margin-left: 20px;
   height: 100px;
 }
-h1 .subhead, h2 .subhead, h3 .subhead, h4 .subhead {
+
+.subhead {
   margin: 40px;
   text-align: center;
 }
-h1 .container, h2 .container, h3 .container, h4 .container {
+
+.container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -105,81 +121,101 @@ h1 .container, h2 .container, h3 .container, h4 .container {
   max-width: 95%;
   margin: 0 auto;
 }
-h1 .recent, h2 .recent, h3 .recent, h4 .recent {
+
+.recent {
   margin: 20px;
   text-decoration: none;
   transition: transform 0.3s ease;
 }
-h1 .recent:hover, h2 .recent:hover, h3 .recent:hover, h4 .recent:hover {
+
+.recent:hover {
   transform: scale(1.05);
 }
-h1 .recent img, h2 .recent img, h3 .recent img, h4 .recent img {
+
+.recent img {
   border-radius: 3px;
   max-width: 100%;
 }
-h1 .recent p, h2 .recent p, h3 .recent p, h4 .recent p {
+
+.recent p {
   color: #000;
   text-align: center;
   font-size: 2em;
   margin-top: 10px;
 }
-h1 .card, h2 .card, h3 .card, h4 .card {
+
+.card {
   max-width: 400px;
 }
-h1 td, h2 td, h3 td, h4 td {
+
+td {
   padding: 20px;
 }
-h1 .text, h2 .text, h3 .text, h4 .text {
+
+.text {
   font-size: 1.2em;
   max-width: 70%;
   margin: 0 auto;
   padding: 40px;
 }
-h1 .card, h2 .card, h3 .card, h4 .card {
+
+.card {
   max-width: 500px;
   margin: 30px;
 }
-h1 .tab-content, h2 .tab-content, h3 .tab-content, h4 .tab-content {
+
+.tab-content {
   display: none;
 }
-h1 .active, h2 .active, h3 .active, h4 .active {
+
+.active {
   display: block;
 }
-h1 .tab-content h2, h2 .tab-content h2, h3 .tab-content h2, h4 .tab-content h2 {
+
+.tab-content h2 {
   margin: 20px;
 }
-h1 #tabs, h2 #tabs, h3 #tabs, h4 #tabs {
+
+#tabs {
   font-size: 1.4em;
 }
-h1 .card-header p, h2 .card-header p, h3 .card-header p, h4 .card-header p {
+
+.card-header p {
   font-size: 1.5em;
   display: inline;
 }
-h1 .card .price, h2 .card .price, h3 .card .price, h4 .card .price {
+
+.card .price {
   float: right;
 }
-h1 .footer, h2 .footer, h3 .footer, h4 .footer {
+
+.footer {
   color: #f9a17d;
   background-color: #403a60;
   padding: 100px;
 }
-h1 .footer ul, h2 .footer ul, h3 .footer ul, h4 .footer ul {
+
+.footer ul {
   display: table;
   margin: 0 auto;
 }
-h1 .footer ul li, h2 .footer ul li, h3 .footer ul li, h4 .footer ul li {
+
+.footer ul li {
   margin: 20px;
   letter-spacing: 2px;
   display: inline;
   list-style: none;
 }
-h1 .footer h3, h2 .footer h3, h3 .footer h3, h4 .footer h3 {
+
+.footer h3 {
   text-align: right;
 }
-h1 #reserveForm, h2 #reserveForm, h3 #reserveForm, h4 #reserveForm {
+
+#reserveForm {
   padding: 20px 0px 20px 0px;
 }
-h1 .form-check, h2 .form-check, h3 .form-check, h4 .form-check {
+
+.form-check {
   padding: 20px;
 }
 
