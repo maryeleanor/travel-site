@@ -1,3 +1,2 @@
-# restaurant-site
-Sample Restaurant Website
 # travel-site
+Sample Travel Website
