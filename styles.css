@@ -2,7 +2,7 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
   font-family: "Playfair Display", serif;
 }
 
@@ -116,6 +116,10 @@ header * {
   z-index: 1;
 }
 
+.hero {
+  height: 30vh;
+}
+
 header h1 {
   font-weight: bold;
 }
@@ -149,32 +153,32 @@ header p {
 
 .recent {
   margin: 30px;
-  text-decoration: none;
   transition: transform 0.3s ease;
+}
+.recent img {
+  border-radius: 3px;
+  max-width: 100%;
+}
+.recent h3 {
+  color: #403a60;
+  text-align: center;
+  margin-top: 10px;
+}
+.recent a {
+  color: #403a60;
+}
+.recent a:visited {
+  color: #403a60;
+}
+.recent a:hover {
+  color: #f9a17d;
 }
 
 .recent:hover {
   transform: scale(1.05);
 }
 
-.recent img {
-  border-radius: 3px;
-  max-width: 100%;
-}
-
-.recent p {
-  color: #000;
-  text-align: center;
-  font-size: 2em;
-  margin-top: 10px;
-}
-
-td {
-  padding: 20px;
-}
-
-.text {
-  font-size: 1.2em;
+.center-page {
   max-width: 70vw;
   margin: 0 auto;
   padding: 40px;
@@ -191,6 +195,27 @@ td {
 .card {
   max-width: 500px;
   margin: 30px;
+  transition: transform 0.3s ease;
+}
+
+.card p {
+  text-decoration: none;
+  color: #403a60;
+}
+
+.card a {
+  color: #403a60;
+}
+.card a:visited {
+  color: #403a60;
+}
+.card a:hover {
+  color: #f9a17d;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  text-decoration: none;
 }
 
 .tab-content {

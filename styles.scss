@@ -3,11 +3,28 @@ $font-stack:  'Nunito', sans-serif;
 $primary-color: #403a60;
 $secondary-color: #f9a17d;
 
+
+
+@mixin cardlinks ($link, $hover) {
+    & {
+        color: $link;
+        
+        &:visited {
+            color: $primary-color;
+        }
+        &:hover {
+            color: $hover
+        } 
+    }
+}
+
+
+
 body {
     font-family: $font-stack;
 }
 
-h1, h2, h3, h4 {
+h1, h2, {
     font-family: $header-font;
 }
 
@@ -115,11 +132,14 @@ header::after{
     opacity: 0.3;
 }
  
-
 header * {
     position:relative;
     margin-left: 10%;
     z-index: 1;
+}
+
+.hero {
+    height: 30vh;
 }
 
 header h1 {  
@@ -154,33 +174,32 @@ header p {
 } 
   
 .recent {
-    margin: 30px;
-    text-decoration: none;
+    margin: 30px; 
     transition: transform 0.3s ease;
+
+        img {
+            border-radius: 3px;
+            max-width: 100%;
+        }
+        
+        h3 {
+            color: $primary-color;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        a {
+            @include cardlinks($primary-color,$secondary-color)
+        }
+        
 }
 
 .recent:hover {
     transform: scale(1.05);
 }
-  
-.recent img {
-    border-radius: 3px;
-    max-width: 100%;
-}
-  
-.recent p {
-    color: #000;
-    text-align: center;
-    font-size: 2em;
-    margin-top: 10px;
-}
- 
-td{
-    padding:20px;
-}
 
-.text{
-    font-size:1.2em;
+
+.center-page {
     max-width: 70vw;
     margin: 0 auto;
     padding: 40px;
@@ -198,9 +217,24 @@ td{
 .card{
     max-width: 500px;
     margin: 30px;
+    transition: transform 0.3s ease;
 }
 
- .tab-content {
+.card p{
+    text-decoration: none;
+    color: $primary-color;
+}
+
+.card a{
+    @include cardlinks($primary-color,$secondary-color)
+}
+
+.card:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+.tab-content {
     display: none;
 }
 
