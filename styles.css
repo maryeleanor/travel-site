@@ -142,27 +142,33 @@ header p {
   text-align: center;
 }
 
+section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  width: 95vw;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  max-width: 90%;
   margin: 0 auto;
 }
 
 .recent {
-  margin: 30px;
+  padding: 20px;
   transition: transform 0.3s ease;
 }
 .recent img {
+  max-width: 330px;
   border-radius: 3px;
-  max-width: 100%;
 }
 .recent h3 {
   color: #403a60;
   text-align: center;
-  margin-top: 10px;
+  padding-top: 20px;
 }
 .recent a {
   color: #403a60;
@@ -178,6 +184,14 @@ header p {
   transform: scale(1.05);
 }
 
+.about-text {
+  padding: 40px 0px 60px 0px;
+}
+
+.about-page {
+  padding: 40px 100px 40px 100px;
+}
+
 .center-page {
   max-width: 70vw;
   margin: 0 auto;
@@ -188,13 +202,12 @@ header p {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
-  max-width: 80vw;
   margin: 0 auto;
 }
 
 .card {
-  max-width: 500px;
-  margin: 30px;
+  width: 400px;
+  margin: 20px;
   transition: transform 0.3s ease;
 }
 
