@@ -22,7 +22,7 @@ body {
     font-family: $font-stack;
 }
 
-h1, h2, {
+h1, h2 {
     font-family: $header-font;
 }
 
@@ -170,46 +170,94 @@ section {
     width: 95vw;
 }
 
+
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin:0 auto;
-} 
-  
+  @include flexbox();
+}
+
 .recent {
-    padding: 20px; 
-    transition: transform 0.3s ease;
+  @include flex(400px);
+  @include order(1);
+  margin:20px;
+  transition: transform 0.3s ease;
 
-        img {
-            max-width: 330px;
-            border-radius: 3px;
-        }
-        
-        h3 {
-            color: $primary-color;
-            text-align: center;
-            padding-top: 20px;
-        }
+      h3 {
+    color: $primary-color;
+    text-align: center;
+    padding-top: 20px;
+    }
 
-        a {
-            @include cardlinks($primary-color,$secondary-color)
-        }
-        
+     img {
+    width: 100%;
+    }
 }
 
 .recent:hover {
     transform: scale(1.05);
+    @include cardlinks($primary-color,$secondary-color)
 }
 
-.about-text{
-    padding: 40px 0px 60px 0px;
+.card-containter{
+    @include flexbox();
 }
 
+.card{
+    @include flex(300px);
+    @include order(1);
+    margin:20px;
+    transition: transform 0.3s ease;
 
-.about-page{
-    padding: 40px 100px 40px 100px;
+    p{
+    text-decoration: none;
+    color: $primary-color;
+    }
+    
+    a{
+    @include cardlinks($primary-color,$secondary-color)
+    }
+}
+
+.card-body{
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.card-header p {
+    font-size:1.5em;
+    display: inline;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    text-decoration: none;
 }
 
 .center-page {
@@ -218,32 +266,12 @@ section {
     padding: 40px;
 }
 
-
-.card-containter{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    margin:0 auto;
+.about-text{
+    padding: 40px 0px 60px 0px;
 }
 
-.card{
-    width: 400px;
-    margin: 20px;
-    transition: transform 0.3s ease;
-}
-
-.card p{
-    text-decoration: none;
-    color: $primary-color;
-}
-
-.card a{
-    @include cardlinks($primary-color,$secondary-color)
-}
-
-.card:hover {
-    transform: scale(1.05);
-    text-decoration: none;
+.about-page{
+    padding: 40px 100px 40px 100px;
 }
 
 .tab-content {
@@ -262,14 +290,6 @@ section {
     font-size:1.4em;
 }
 
-.card-header p {
-    font-size:1.5em;
-    display: inline;
-}
-
-.card .price{
-    float: right;
-}
 
 footer{
     color:$secondary-color;

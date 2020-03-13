@@ -151,72 +151,81 @@ section {
 }
 
 .container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  flex-flow: wrap;
+  justify-content: space-evenly;
   margin: 0 auto;
 }
 
 .recent {
-  padding: 20px;
+  -webkit-box-flex: 400px;
+  -moz-box-flex: 400px;
+  -webkit-flex: 400px;
+  -ms-flex: 400px;
+  flex: 400px;
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
+  margin: 20px;
   transition: transform 0.3s ease;
-}
-.recent img {
-  max-width: 330px;
-  border-radius: 3px;
 }
 .recent h3 {
   color: #403a60;
   text-align: center;
   padding-top: 20px;
 }
-.recent a {
-  color: #403a60;
-}
-.recent a:visited {
-  color: #403a60;
-}
-.recent a:hover {
-  color: #f9a17d;
+.recent img {
+  width: 100%;
 }
 
 .recent:hover {
   transform: scale(1.05);
 }
-
-.about-text {
-  padding: 40px 0px 60px 0px;
+.recent:hover {
+  color: #403a60;
 }
-
-.about-page {
-  padding: 40px 100px 40px 100px;
+.recent:hover:visited {
+  color: #403a60;
 }
-
-.center-page {
-  max-width: 70vw;
-  margin: 0 auto;
-  padding: 40px;
+.recent:hover:hover {
+  color: #f9a17d;
 }
 
 .card-containter {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
+  flex-flow: wrap;
+  justify-content: space-evenly;
   margin: 0 auto;
 }
 
 .card {
-  width: 400px;
+  -webkit-box-flex: 300px;
+  -moz-box-flex: 300px;
+  -webkit-flex: 300px;
+  -ms-flex: 300px;
+  flex: 300px;
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
   margin: 20px;
   transition: transform 0.3s ease;
 }
-
 .card p {
   text-decoration: none;
   color: #403a60;
 }
-
 .card a {
   color: #403a60;
 }
@@ -227,9 +236,33 @@ section {
   color: #f9a17d;
 }
 
+.card-body {
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.card-header p {
+  font-size: 1.5em;
+  display: inline;
+}
+
 .card:hover {
   transform: scale(1.05);
   text-decoration: none;
+}
+
+.center-page {
+  max-width: 70vw;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.about-text {
+  padding: 40px 0px 60px 0px;
+}
+
+.about-page {
+  padding: 40px 100px 40px 100px;
 }
 
 .tab-content {
@@ -246,15 +279,6 @@ section {
 
 #tabs {
   font-size: 1.4em;
-}
-
-.card-header p {
-  font-size: 1.5em;
-  display: inline;
-}
-
-.card .price {
-  float: right;
 }
 
 footer {
