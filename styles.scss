@@ -17,6 +17,34 @@ $secondary-color: #f9a17d;
 }
 
 
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+
 
 body {
     font-family: $font-stack;
@@ -147,7 +175,7 @@ header h1 {
 
 header .icon{
     font-size: 6em;
- }
+}
  
 header p {
     font-size: 2em;
@@ -158,7 +186,7 @@ header p {
     margin-bottom:-20px;
 }
 
-.subhead{
+.subhead {
     margin:40px;
     text-align:center;
 }
@@ -168,35 +196,6 @@ section {
     padding-bottom: 20px;
     margin: 0 auto;
     width: 95vw;
-}
-
-
-
-@mixin flexbox() {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-evenly;
-  margin: 0 auto;
-}
-
-@mixin flex($values) {
-  -webkit-box-flex: $values;
-  -moz-box-flex:  $values;
-  -webkit-flex:  $values;
-  -ms-flex:  $values;
-  flex:  $values;
-}
-
-@mixin order($val) {
-  -webkit-box-ordinal-group: $val;  
-  -moz-box-ordinal-group: $val;     
-  -ms-flex-order: $val;     
-  -webkit-order: $val;  
-  order: $val;
 }
 
 .container {
@@ -245,10 +244,6 @@ section {
     }
 }
 
-.card-body{
-    min-height: 400px;
-    overflow: hidden;
-}
 
 .card-header p {
     font-size:1.5em;
@@ -260,8 +255,18 @@ section {
     text-decoration: none;
 }
 
-.center-page {
-    max-width: 70vw;
+.places {
+  @include flex(25%);
+  @include order(1);
+  margin:10px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.article {
+    max-width: 80vw;
     margin: 0 auto;
     padding: 40px;
 }
@@ -290,33 +295,35 @@ section {
     font-size:1.4em;
 }
 
-
-footer{
+footer {
     color:$secondary-color;
     background-color: $primary-color;
     padding:100px;
-  
-    ul{
-    display: table;
-    margin: 0 auto;
-    }
 
-    ul li {
-        margin: 20px;
-        letter-spacing: 2px;
-        display:inline;
-        list-style: none;
-        text-transform:uppercase;
-    }
-    h3 {
-        text-align:right;
-    }
+        a{
+           color:$secondary-color;
+        }
 
-}
-#reserveForm{
-    padding:20px 0px 20px 0px;
-}
+        a:hover {
+            color:$secondary-color;
+            text-decoration: underline;
+        }
 
-.form-check{
-     padding: 20px;
+        ul{
+            display: table;
+            margin: 0 auto;
+            }
+
+        ul li {
+            margin: 20px;
+            letter-spacing: 2px;
+            display: inline;
+            list-style: none;
+            text-transform:uppercase;
+        }
+
+    }       
+     
+section, article, aside, footer, header, nav {
+  display: block;
 }
