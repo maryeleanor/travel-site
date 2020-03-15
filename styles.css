@@ -8,7 +8,7 @@ h1, h2 {
 
 nav {
   color: #403a60;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -21,14 +21,18 @@ nav a {
 }
 
 nav a::after {
-  content: "";
+  content: '';
   color: #403a60;
   border-bottom: 3px solid #403a60;
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   opacity: 0;
   height: 100%;
   width: 100%;
@@ -37,7 +41,8 @@ nav a::after {
 nav a:hover::after {
   color: #403a60;
   opacity: 1;
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .dropdown-toggle {
@@ -46,7 +51,7 @@ nav a:hover::after {
 }
 
 .dropdown-item {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #403a60;
@@ -55,15 +60,19 @@ nav a:hover::after {
 }
 
 .dropdown-item a::after {
-  content: "";
+  content: '';
   color: #403a60;
   border-bottom: 3px solid #403a60;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   opacity: 0;
   height: 100%;
   width: 100%;
@@ -72,7 +81,8 @@ nav a:hover::after {
 .dropdown-item a:hover::after {
   color: #403a60;
   opacity: 1;
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .logo {
@@ -90,17 +100,26 @@ header {
   background-image: url("https://source.unsplash.com/1600x900/?travel");
   background-size: cover;
   background-position: center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: left;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 60vh;
   position: relative;
   color: #fff;
 }
 
 header::after {
-  content: "";
+  content: '';
   background-color: #000;
   position: absolute;
   top: 0;
@@ -108,6 +127,10 @@ header::after {
   right: 0;
   bottom: 0;
   opacity: 0.3;
+}
+
+.header-content {
+  padding-top: 10%;
 }
 
 header * {
@@ -152,86 +175,96 @@ section {
 
 .container {
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  flex-flow: wrap;
-  justify-content: space-evenly;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin: 0 auto;
 }
 
 .recent {
   -webkit-box-flex: 400px;
-  -moz-box-flex: 400px;
-  -webkit-flex: 400px;
   -ms-flex: 400px;
   flex: 400px;
   -webkit-box-ordinal-group: 1;
-  -moz-box-ordinal-group: 1;
   -ms-flex-order: 1;
-  -webkit-order: 1;
   order: 1;
   margin: 20px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
+
 .recent h3 {
   color: #403a60;
   text-align: center;
   padding-top: 20px;
 }
+
 .recent img {
   width: 100%;
 }
 
 .recent:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
+
 .recent:hover {
   color: #403a60;
 }
+
 .recent:hover:visited {
   color: #403a60;
 }
+
 .recent:hover:hover {
   color: #f9a17d;
 }
 
 .card-containter {
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  flex-flow: wrap;
-  justify-content: space-evenly;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin: 0 auto;
 }
 
 .card {
   -webkit-box-flex: 300px;
-  -moz-box-flex: 300px;
-  -webkit-flex: 300px;
   -ms-flex: 300px;
   flex: 300px;
   -webkit-box-ordinal-group: 1;
-  -moz-box-ordinal-group: 1;
   -ms-flex-order: 1;
-  -webkit-order: 1;
   order: 1;
   margin: 20px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
+
 .card p {
   text-decoration: none;
   color: #403a60;
 }
+
 .card a {
   color: #403a60;
 }
+
 .card a:visited {
   color: #403a60;
 }
+
 .card a:hover {
   color: #f9a17d;
 }
@@ -242,23 +275,21 @@ section {
 }
 
 .card:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   text-decoration: none;
 }
 
 .places {
   -webkit-box-flex: 25%;
-  -moz-box-flex: 25%;
-  -webkit-flex: 25%;
   -ms-flex: 25%;
   flex: 25%;
   -webkit-box-ordinal-group: 1;
-  -moz-box-ordinal-group: 1;
   -ms-flex-order: 1;
-  -webkit-order: 1;
   order: 1;
   margin: 10px;
 }
+
 .places img {
   width: 100%;
 }
@@ -298,17 +329,21 @@ footer {
   background-color: #403a60;
   padding: 100px;
 }
+
 footer a {
   color: #f9a17d;
 }
+
 footer a:hover {
   color: #f9a17d;
   text-decoration: underline;
 }
+
 footer ul {
   display: table;
   margin: 0 auto;
 }
+
 footer ul li {
   margin: 20px;
   letter-spacing: 2px;
@@ -320,5 +355,4 @@ footer ul li {
 section, article, aside, footer, header, nav {
   display: block;
 }
-
 /*# sourceMappingURL=styles.css.map */

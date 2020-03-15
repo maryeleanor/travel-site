@@ -157,7 +157,11 @@ header::after{
     bottom:0;
     opacity: 0.3;
 }
- 
+
+.header-content{
+    padding-top:10%;
+}
+
 header * {
     position: relative;
     padding-left: 10%;
