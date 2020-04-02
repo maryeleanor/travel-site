@@ -1,4 +1,22 @@
-// tabs for places page
+
+//tabs on places page
+function onTabClick(thisTab) {
+
+    let activeTabs = document.querySelectorAll('.active');
+
+    // hide any active tab
+    for (let i = 0; i < activeTabs.length; i++) {
+        activeTabs[i].classList.remove("active");
+    }
+
+    // activate new tab
+    thisTab.target.className += ' active';
+    document.getElementById(thisTab.target.href.split('#')[1]).className += ' active';
+
+}
+
+document.getElementById('tabs').addEventListener('click', onTabClick);
+
 
 //tabs on places page
 function onTabClick(thisTab) {
@@ -16,6 +34,8 @@ function onTabClick(thisTab) {
 }
 
 document.getElementById('tabs').addEventListener('click', onTabClick);
+
+
 
 
 // contact form submission
