@@ -12,13 +12,13 @@ All images are pulled in from unsplash upon site-load.
 [CS50 Web Programming with Python and JavaScript](https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/course/#block-v1:HarvardX+CS50W+Web+type@chapter+block@3b4d945d89eb40bcad81746770a81c3b "CS50 Web on edX")
 
 -----
-##Project 0: Homepage
+## Project 0: Homepage
 
-###Objectives
+### Objectives
 Become more comfortable with HTML and CSS to design and style webpages.
 Learn to use SCSS to write more complex stylesheets for your webpages. 
    
-###Requirements
+### Requirements
 Alright, now it’s time to make your website your own. Design a personal webpage about yourself, one of your interests, or any other topic of your choice. The subject matter, look and feel, and design of the site are entirely up to you, subject to the following requirements:
 
 - Your website must contain at least four different .html pages, and it should be possible to get from any page on your website to any other page by following one or more hyperlinks.
