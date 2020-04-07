@@ -6,13 +6,9 @@ All images are pulled in from unsplash upon site-load.
 [Preview the site and click around.](https://maryeleanor.github.io/travel-site/ "Travel Site")
 
 
-------
-# Project 0 
-
-[CS50 Web Programming with Python and JavaScript](https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/course/#block-v1:HarvardX+CS50W+Web+type@chapter+block@3b4d945d89eb40bcad81746770a81c3b "CS50 Web on edX")
-
 -----
-## Project 0: Homepage
+## Project 0: Homepage Assignment 
+for [CS50 Web Programming with Python and JavaScript](https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/course/#block-v1:HarvardX+CS50W+Web+type@chapter+block@3b4d945d89eb40bcad81746770a81c3b "CS50 Web on edX")
 
 ### Objectives
 Become more comfortable with HTML and CSS to design and style webpages.
