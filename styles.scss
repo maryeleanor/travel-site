@@ -348,6 +348,23 @@ section {
     }
 }
 
+.blog-title{
+    color: $secondary-color ;
+}
+
+table{
+    margin: 0 auto;
+    width: 90 vw;
+}
+
+table *{
+    padding: 10px;
+}
+ 
+td{
+    @extend .card;
+}
+
 .tab-content {
     display: none;
 }
